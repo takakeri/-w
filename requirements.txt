@@ -6,6 +6,6 @@ discord.py==1.7.3
 idna==3.2
 multidict==5.1.0
 numpy==1.21.1
-opencv-python==4.5.3.56
+opencv-python
 typing-extensions==3.10.0.0
 yarl==1.6.3
