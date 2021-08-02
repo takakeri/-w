@@ -1,1 +1,1 @@
-clock: python main.py
+web: gunicorn -b 0.0.0.0:$PORT --pythonpath main:app
