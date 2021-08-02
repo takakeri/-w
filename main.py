@@ -45,7 +45,7 @@ async def on_message(message):
             except:
                 user1,user2=None,None
             if user1==None or user2 == None:
-                await message.channel.send("ユーザーを二人メンションしてね")
+                await message.channel.send(f"Error:{user1}, {user2}::ユーザーを二人メンションしてね")
                 return 0
             await message.channel.send(f"""{user1} {user2} の対局開始\n\n黒: {user1}\n白: {user2}\n\n先行: 黒\n\n自分の番の時に[set x座標,y座標]と打ち込んで石を置けます""")
             user1 = texts[1].replace("<","").replace(">","").replace("@!","")

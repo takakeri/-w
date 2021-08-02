@@ -44,6 +44,7 @@ class Session():
         #セッションが存在するか
         x = message.content.split(" ")[1].split(",")[0]
         y = message.content.split(" ")[1].split(",")[1]
+        othello.turn = othello.turn = self.session_dict[str(channel_id)]["turn"]
         if othello.turn == 1: t = 1
         else: t=2
 
