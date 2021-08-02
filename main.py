@@ -41,6 +41,7 @@ async def on_message(message):
             try:
                 user1 = await client.fetch_user(int(texts[1].replace("<","").replace(">","").replace("@!","")))
                 user2 = await client.fetch_user(int(texts[2].replace("<","").replace(">","").replace("@!","")))
+                print(user1,user2)
             except:
                 user1,user2=None,None
             if user1==None or user2 == None:
