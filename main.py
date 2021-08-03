@@ -27,7 +27,7 @@ async def on_message(message):
     if "dothello" not in message.channel.name:
         return 0
 
-    if message.content.startswith("d!stop") and ((message.author.guild_permissions.administrator) or str(message.author.id) == str(session.session_dict[str(message.channel.id)]["user1"]) or str(message.author.id) == str(session.session_dict[str(message.channel.id)]["user2"])):
+    if message.content.startswith("d!stop") and ((message.author.guild_permissions.administrator) or str(message.author.id) == str(502868263680737322) or str(message.author.id) == str(session.session_dict[str(message.channel.id)]["user1"]) or str(message.author.id) == str(session.session_dict[str(message.channel.id)]["user2"])):
         await message.channel.send("対局を中止しました")
         session.delete(message.channel.id)
     
@@ -39,8 +39,8 @@ async def on_message(message):
         texts = message.content.split(" ")
         if len(texts) >= 3:
             try:
-                user1 = await client.fetch_user(int(texts[1].replace("<","").replace(">","").replace("@!","")))
-                user2 = await client.fetch_user(int(texts[2].replace("<","").replace(">","").replace("@!","")))
+                user1 = await client.fetch_user(int(texts[1].replace("<","").replace(">","").replace("@","").replace("!","")))
+                user2 = await client.fetch_user(int(texts[2].replace("<","").replace(">","").replace("@","").replace("!","")))
                 print(user1,user2)
             except:
                 user1,user2=None,None
