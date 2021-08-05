@@ -51,6 +51,7 @@ async def on_message(message):
 
             if random.randint(0,1) == 1:
                 user1,user2 = user2,user1
+                texts[1],texts[2] = texts[2],texts[1]
             await message.channel.send(f"""{user1} {user2} の対局開始\n\n黒: {user1}\n白: {user2}\n\n先行: 黒\n\n自分の番の時に[set x座標,y座標]と打ち込んで石を置けます""")
             user1 = texts[1].replace("<","").replace(">","").replace("@!","")
             user2 = texts[2].replace("<","").replace(">","").replace("@!","")
